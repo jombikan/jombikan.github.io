@@ -8,24 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Jombik Anna</h1>
-        <p>Üdvözöllek a bemutatkozó oldalamon!</p>
+        <p>Üdvözöllek az oldalamon!</p>
     </header>
 
     <main>
         <div class="button-container">
-            <button onclick="showInfo('Rólam')">Rólam</button>
-            <button onclick="showInfo('Projektek')">Projektek</button>
-            <button onclick="showInfo('Kapcsolat')">Kapcsolat</button>
+            <button class="diamond" onclick="showSection('Cserkészet')">Cserkészet</button>
+            <button class="diamond" onclick="showSection('Család')">Család</button>
+            <button class="diamond" onclick="showSection('Tanulmányok')">Tanulmányok</button>
+            <button class="diamond" onclick="showSection('Portfólió')">Portfólió</button>
+            <button class="diamond" onclick="showSection('Hobbik')">Hobbik</button>
+            <button class="diamond" onclick="showSection('Hit')">Hit</button>
+            <button class="diamond" onclick="showSection('Utazás')">Utazás</button>
         </div>
-        <div id="info" class="info"></div>
+
+        <div id="content" class="content-section">
+            <!-- Tartalom itt jelenik meg -->
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Jombik Anna</p>
+        <p>Email - xxx@gmail.com | Telefon - +36xxx | Messenger - Facebook.com | Instagram - Insta.com</p>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
