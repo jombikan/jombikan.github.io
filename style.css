@@ -1,66 +1,101 @@
-/* Alapstílusok - Mobile-first megközelítés */
+/* Alapstílusok - Mobile-first */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #4B2E21; /* Sötétbarna háttér */
+    color: #F5F5DC; /* Törtfehér betűk */
     text-align: center;
 }
 
 header {
-    background-color: #4CAF50;
     padding: 20px;
-    color: white;
 }
 
 h1 {
-    font-size: 2rem;
+    color: #FFD700; /* Arany cím */
+    font-size: 2.5rem;
 }
 
 p {
-    font-size: 1.2rem;
+    color: #F5F5DC; /* Törtfehér üdvözlő szöveg */
 }
 
 .button-container {
-    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
+button.diamond {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 3px solid #FFD700; /* Arany szegély */
+    transform: rotate(45deg); /* Rombusz alak */
     margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 1rem;
+    color: #F5F5DC; /* Törtfehér felirat */
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+button.diamond:hover {
+    background-color: #FFD700;
+    color: #4B2E21; /* Sötétbarna szöveg */
 }
 
-.info {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #333;
+button.diamond span {
+    transform: rotate(-45deg);
+    display: block;
 }
 
-/* Reszponzív design - nagyobb kijelzőkre */
+.content-section {
+    background-color: #F5F5DC; /* Törtfehér tartalom háttér */
+    color: #4B2E21; /* Sötétbarna betűk */
+    padding: 20px;
+    display: none;
+    position: relative;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section .back-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #FFD700; /* Arany házikó ikon */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    color: #F5F5DC;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Reszponzív dizájn - nagyobb kijelzőkre */
 @media(min-width: 768px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
-    p {
-        font-size: 1.5rem;
-    }
-
-    button {
+    button.diamond {
+        width: 150px;
+        height: 150px;
         font-size: 1.2rem;
-        padding: 15px 30px;
     }
 }
