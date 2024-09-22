@@ -1,18 +1,13 @@
-// Eseménykezelők gombokhoz
-function showInfo(section) {
-    let infoDiv = document.getElementById('info');
+// Tartalom megjelenítése a gombokra kattintva
+function showSection(section) {
+    const content = document.getElementById('content');
+    content.innerHTML = `<a href="#" class="back-home" onclick="goHome()">🏠</a><p>Szöveg a ${section} részről</p>`;
+    content.classList.add('active');
+}
 
-    switch(section) {
-        case 'Rólam':
-            infoDiv.innerHTML = '<p>Jombik Anna vagyok, webfejlesztő és szoftverfejlesztési rajongó. Szeretem az új technológiákat felfedezni és kreatív projekteken dolgozni.</p>';
-            break;
-        case 'Projektek':
-            infoDiv.innerHTML = '<p>Korábbi projektek közé tartoznak: webalkalmazások, reszponzív design, és interaktív felhasználói élmények.</p>';
-            break;
-        case 'Kapcsolat':
-            infoDiv.innerHTML = '<p>Elérhető vagyok emailen: jombik.anna@example.com</p>';
-            break;
-        default:
-            infoDiv.innerHTML = '';
-    }
+// Visszatérés a kezdőlapra
+function goHome() {
+    const content = document.getElementById('content');
+    content.classList.remove('active');
+    content.innerHTML = '';
 }
