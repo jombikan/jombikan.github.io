@@ -1,7 +1,7 @@
 // Tartalom megjelenítése a gombokra kattintva
 function showSection(section) {
     const content = document.getElementById('content');
-    content.innerHTML = `<a href="#" class="back-home" onclick="goHome()">🏠</a><p>Szöveg a ${section} részről</p>`;
+    content.innerHTML = `<button class="back-home" onclick="goHome()">Vissza</button><p>Szöveg a ${section} részről</p>`;
     content.classList.add('active');
 }
 
