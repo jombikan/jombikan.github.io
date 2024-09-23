@@ -74,6 +74,24 @@ p {
     cursor: pointer;
 }
 
+#dot-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* A pöttyök a rombuszok mögött lesznek */
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFD700; /* Arany pötty */
+    border-radius: 50%;
+}
+
 /* Láb rész */
 footer {
     background-color: #000;
