@@ -65,6 +65,7 @@ p {
 
 .home-icon {
     font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     border: none;
     color: #FFD700; /* Arany ikon */
