@@ -41,21 +41,11 @@ p {
     color: #FFD700; /* Arany felirat */
     cursor: pointer;
     transition: transform 0.3s ease;
-    animation: rotateDiamond 5s infinite linear;
 }
 
 .diamond:hover {
     background-color: #FFD700;
     color: #000; /* Fekete szöveg, ha fölé viszik az egeret */
-}
-
-@keyframes rotateDiamond {
-    0% {
-        transform: rotate(45deg);
-    }
-    100% {
-        transform: rotate(405deg); /* Lassú forgás */
-    }
 }
 
 /* Tartalom rész */
