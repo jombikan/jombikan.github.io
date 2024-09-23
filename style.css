@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000; /* Fekete háttér */
-    color: #FFF9E6; /* Arany szöveg */
+    color: #FFF9E6; /* Fehér szöveg */
     text-align: center;
 }
 
@@ -13,7 +13,7 @@ header {
 }
 
 h1 {
-    color: #FFF9E6; /* Arany cím */
+    color: #FFF9E6; /* Fehér cím */
     font-size: 2.5rem;
 }
 
