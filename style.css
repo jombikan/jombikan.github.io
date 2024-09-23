@@ -102,4 +102,8 @@ footer p {
         line-height: 150px;
         margin-top: 70px;
     }
+    .diamond-buttons {
+        margin-top: 80px; /* Nagyobb térköz nagyobb kijelzőkön */
+    }
+
 }
