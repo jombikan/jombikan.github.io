@@ -1,13 +1,20 @@
 // Tartalom megjelenítése a gombokra kattintva
-function showSection(section) {
-    const content = document.getElementById('content');
-    content.innerHTML = `<button class="back-home" onclick="goHome()">Vissza</button><p>Szöveg a ${section} részről</p>`;
-    content.classList.add('active');
+function showPage(section) {
+    const mainPage = document.getElementById('main-page');
+    const contentPage = document.getElementById('content-page');
+    const contentDiv = document.querySelector('.content');
+
+    mainPage.classList.add('hidden');
+    contentPage.classList.add('active');
+
+    contentDiv.innerHTML = `<h2>${section}</h2><p>Szöveg a ${section} témához.</p>`;
 }
 
 // Visszatérés a kezdőlapra
 function goHome() {
-    const content = document.getElementById('content');
-    content.classList.remove('active');
-    content.innerHTML = '';
+    const mainPage = document.getElementById('main-page');
+    const contentPage = document.getElementById('content-page');
+
+    contentPage.classList.remove('active');
+    mainPage.classList.remove('hidden');
 }
