@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000; /* Fekete háttér */
-    color: #FFD700; /* Arany szöveg */
+    color: #FFF9E6; /* Arany szöveg */
     text-align: center;
 }
 
@@ -13,12 +13,12 @@ header {
 }
 
 h1 {
-    color: #FFD700; /* Arany cím */
+    color: #FFF9E6; /* Arany cím */
     font-size: 2.5rem;
 }
 
 p {
-    color: #FFD700; /* Arany üdvözlő szöveg */
+    color: #FFF9E6; /* Arany üdvözlő szöveg */
 }
 
 .diamond-buttons {
@@ -44,7 +44,7 @@ p {
 }
 
 .diamond:hover {
-    background-color: #FFD700;
+    background-color: #FFF9E6;
     color: #000; /* Fekete szöveg, ha fölé viszik az egeret */
 }
 
