@@ -14,24 +14,26 @@
         <p>Üdvözöllek az oldalamon!</p>
     </header>
 
-    <main>
-        <div class="flower">
-            <button class="petal" onclick="showSection('Cserkészet')">Cserkészet</button>
-            <button class="petal" onclick="showSection('Család')">Család</button>
-            <button class="petal" onclick="showSection('Tanulmányok')">Tanulmányok</button>
-            <button class="petal" onclick="showSection('Portfólió')">Portfólió</button>
-            <button class="petal" onclick="showSection('Hobbik')">Hobbik</button>
-            <button class="petal" onclick="showSection('Hit')">Hit</button>
-            <button class="petal" onclick="showSection('Utazás')">Utazás</button>
-        </div>
-
-        <div id="content" class="content-section">
-            <!-- Tartalom itt jelenik meg -->
+    <main id="main-page">
+        <div class="diamond-buttons">
+            <div class="diamond" onclick="showPage('Cserkészet')">Cserkészet</div>
+            <div class="diamond" onclick="showPage('Portfólió')">Portfólió</div>
+            <div class="diamond" onclick="showPage('Skillek')">Skillek</div>
+            <div class="diamond" onclick="showPage('Hobbik')">Hobbik</div>
+            <div class="diamond" onclick="showPage('Hit')">Hit</div>
+            <div class="diamond" onclick="showPage('Utazás')">Utazás</div>
         </div>
     </main>
 
+    <section id="content-page" class="hidden">
+        <button class="home-icon" onclick="goHome()">🏠</button>
+        <div class="content">
+            <!-- Dinamikus tartalom jelenik meg itt -->
+        </div>
+    </section>
+
     <footer>
-        <p>Email: xxx@gmail.com | Telefon: +36xxx | Messenger: Facebook.com | Instagram: Insta.com</p>
+        <p>Elérhetőségeim: Email - xxx@gmail.com | Telefon - +36xxx | Messenger - Facebook.com | Instagram - Insta.com</p>
     </footer>
 
     <script src="script.js"></script>
