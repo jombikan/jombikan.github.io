@@ -1,14 +1,3 @@
-// Tartalom megjelenítése a gombokra kattintva
-function showPage(section) {
-    const mainPage = document.getElementById('main-page');
-    const contentPage = document.getElementById('content-page');
-    const contentDiv = document.querySelector('.content');
-
-    mainPage.classList.add('hidden');
-    contentPage.classList.add('active');
-
-    contentDiv.innerHTML = `<h2>${section}</h2><p>Szöveg a ${section} témához.</p>`;
-}
 function showPage(page) {
     const mainPage = document.getElementById('main-page');
     const portfolioPage = document.getElementById('portfolio-page');
