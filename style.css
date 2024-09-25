@@ -151,6 +151,7 @@ footer p {
     }
     .portfolio-item {
         width: 30%; /* Az SVG fájlok szélessége 30% lesz, hogy egymás mellett elférjenek */
+        height:= width;
         margin: 20px;
     }
     .diamond {
