@@ -129,7 +129,10 @@ footer p {
     h1 {
         font-size: 3.5rem;
     }
-
+    .portfolio-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
     .diamond {
         width: 170px;
         height: 170px;
