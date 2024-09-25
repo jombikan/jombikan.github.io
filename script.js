@@ -32,12 +32,3 @@ function goHome() {
     // Megjeleníti a kezdőlapot
     mainPage.classList.remove('hidden');
 }
-
-// Visszatérés a kezdőlapra
-function goHome() {
-    const mainPage = document.getElementById('main-page');
-    const contentPage = document.getElementById('content-page');
-
-    contentPage.classList.remove('active');
-    mainPage.classList.remove('hidden');
-}
