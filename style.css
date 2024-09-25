@@ -45,7 +45,6 @@ p {
 
 .diamond:hover {
     background-color: #FFF9E6;
-    color: #000; /* Fekete szöveg, ha fölé viszik az egeret */
 }
 
 /* Tartalom rész */
