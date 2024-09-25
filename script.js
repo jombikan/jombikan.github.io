@@ -9,6 +9,29 @@ function showPage(section) {
 
     contentDiv.innerHTML = `<h2>${section}</h2><p>Szöveg a ${section} témához.</p>`;
 }
+function showPage(page) {
+    const mainPage = document.getElementById('main-page');
+    const portfolioPage = document.getElementById('portfolio-page');
+
+    // Elrejti a kezdőlapot
+    mainPage.classList.add('hidden');
+
+    // Megjeleníti a megfelelő oldalt
+    if (page === 'Portfólió') {
+        portfolioPage.classList.remove('hidden');
+    }
+}
+
+function goHome() {
+    const mainPage = document.getElementById('main-page');
+    const portfolioPage = document.getElementById('portfolio-page');
+
+    // Elrejti a Portfólió oldalt
+    portfolioPage.classList.add('hidden');
+
+    // Megjeleníti a kezdőlapot
+    mainPage.classList.remove('hidden');
+}
 
 // Visszatérés a kezdőlapra
 function goHome() {
