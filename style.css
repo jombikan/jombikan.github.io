@@ -68,7 +68,7 @@ p {
     font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     border: none;
-    color: #FFD700; /* Arany ikon */
+    color: #cd853f; /* Arany ikon */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -97,16 +97,16 @@ p {
 
 /* Különböző keret-stílusok az SVG fájlokhoz */
 .portfolio-item:nth-child(1) {
-    border: 10px solid #FFD700; /* Arany színű keret */
+    border: 10px solid #cd853f; /* Arany színű keret */
     border-radius: 15px;
 }
 
 .portfolio-item:nth-child(2) {
-    border: 5px dashed #FFD700; /* Szaggatott keret */
+    border: 5px dashed #cd853f; /* Szaggatott keret */
 }
 
 .portfolio-item:nth-child(3) {
-    border: 8px groove #FFD700; /* Barázdált keret */
+    border: 8px groove #cd853f; /* Barázdált keret */
 }
 
 
