@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000; /* Fekete háttér */
-    color: #FFD700; /* Fehér szöveg */
+    color: #cd853f; /* Fehér szöveg */
     text-align: center;
 }
 
@@ -18,7 +18,7 @@ h1 {
 }
 
 p {
-    color: #FFD700; /* Arany üdvözlő szöveg */
+    color: #cd853f; /* Arany üdvözlő szöveg */
 }
 
 .diamond-buttons {
@@ -38,7 +38,7 @@ p {
     margin: 10px;
     line-height: 120px;
     font-size: 1rem;
-    color: #FFD700; /* Arany felirat */
+    color: #cd853f; /* Arany felirat */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -114,7 +114,7 @@ p {
 footer {
     background-color: #000;
     padding: 20px;
-    color: #FFD700;
+    color: #cd853f;
     position: fixed;
     width: 100%;
     bottom: 0;
