@@ -74,6 +74,41 @@ p {
     left: 10px;
     cursor: pointer;
 }
+.portfolio-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Különböző keret-stílusok az SVG fájlokhoz */
+.portfolio-item:nth-child(1) {
+    border: 10px solid #FFD700; /* Arany színű keret */
+    border-radius: 15px;
+}
+
+.portfolio-item:nth-child(2) {
+    border: 5px dashed #FFD700; /* Szaggatott keret */
+}
+
+.portfolio-item:nth-child(3) {
+    border: 8px groove #FFD700; /* Barázdált keret */
+}
+
 
 /* Láb rész */
 footer {
