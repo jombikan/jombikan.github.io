@@ -1,168 +1,92 @@
-/* Alapstílusok - Courier New betűtípus */
+/* General styling */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Fekete háttér */
-    color: #cd853f; /* Fehér szöveg */
-    text-align: center;
+  background-color: black;
+  font-family: "Courier New", monospace;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    padding: 20px;
+h1, h2 {
+  text-align: center;
 }
 
 h1 {
-    color: #FFF9E6; /* Fehér cím */
-    font-size: 2.5rem;
+  color: white;
 }
 
-p {
-    color: #cd853f; /* Arany üdvözlő szöveg */
+h2 {
+  color: #c49a6a;
 }
 
-.diamond-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
 }
 
-.diamond {
-    width: 120px;
-    height: 120px;
-    background-color: transparent;
-    border: 3px solid #FFF9E6; /* Fehér szegély */
-    position: relative;
-    transform: rotate(45deg);
-    margin: 10px;
-    line-height: 120px;
-    font-size: 1rem;
-    color: #cd853f; /* Arany felirat */
-    cursor: pointer;
-    transition: transform 0.3s ease;
+nav ul {
+  display: none;
+  list-style-type: none;
 }
 
-.diamond:hover {
-    background-color: #FFF9E6;
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
 }
 
-/* Tartalom rész */
-#content-page {
-    display: none;
-    padding: 20px;
+/* Rhombus styling */
+#rhombuses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-#content-page.active {
-    display: block;
-    color: #000;
+.rhombus {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid white;
+  color: #c49a6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Section styling */
+section {
+  padding: 20px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.home-icon {
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: transparent;
-    border: none;
-    color: #cd853f; /* Arany ikon */
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-}
-.portfolio-content {
+/* Media Queries */
+@media (min-width: 768px) {
+  #introduction {
+    float: left;
+    width: 50%;
+  }
+
+  #contact {
+    float: right;
+    width: 50%;
+  }
+
+  nav ul {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
+    gap: 15px;
+  }
 
-.portfolio-item {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Különböző keret-stílusok az SVG fájlokhoz */
-.portfolio-item:nth-child(1) {
-    border: 10px solid #cd853f; /* Arany színű keret */
-    border-radius: 15px;
-}
-
-.portfolio-item:nth-child(2) {
-    border: 5px dashed #cd853f; /* Szaggatott keret */
-}
-
-.portfolio-item:nth-child(3) {
-    border: 8px groove #cd853f; /* Barázdált keret */
-}
-
-
-/* Láb rész */
-footer {
-    background-color: #000;
-    padding: 20px;
-    color: #cd853f;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Animált scrollozás az elérhetőségekhez */
-.contact-info {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll 15s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Reszponzív design - nagyobb kijelzőkre */
-@media(min-width: 768px) {
-    h1 {
-        font-size: 3.5rem;
-    }
-    .portfolio-content {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .portfolio-item {
-        width: 30%; /* Az SVG fájlok szélessége 30% lesz, hogy egymás mellett elférjenek */
-        height:= width;
-        margin: 20px;
-    }
-    .diamond {
-        width: 170px;
-        height: 170px;
-        font-size: 1.2rem;
-        line-height: 170px;
-        margin-top: 70px;
-    }
-    .diamond-buttons {
-        margin-top: 70px; /* Nagyobb térköz nagyobb kijelzőkön */
-    }
-
+  .hamburger-menu {
+    display: none;
+  }
 }
