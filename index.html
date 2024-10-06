@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jombik Anna</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jombik Anna</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header with navigation and title -->
-  <header>
-    <div class="logo">
-      <img src="alairas.svg" alt="Signature">
-    </div>
-    <nav>
-      <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li><a href="#rhombuses">Főoldal</a></li>
-        <li><a href="#introduction">Bemutatkozás</a></li>
-        <li><a href="#contact">Elérhetőség</a></li>
-      </ul>
+    <header>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <img src="alairas.svg" alt="Aláírás" class="signature">
+        <h1>Jombik Anna</h1>
+        <h2 id="subtitle"></h2>
+    </header>
+    <nav id="menu">
+        <ul>
+            <li onclick="showSection('home')">Főoldal</li>
+            <li onclick="showSection('introduction')">Bemutatkozás</li>
+            <li onclick="showSection('contact')">Elérhetőség</li>
+        </ul>
     </nav>
-  </header>
-
-  <!-- Main title and dynamic subtitle -->
-  <main>
-    <h1>Jombik Anna</h1>
-    <h2 id="subtitle"></h2>
-
-    <!-- Rhombuses section -->
-    <section id="rhombuses">
-      <div class="rhombus" onclick="showContent('kedvencek')">Kedvencek</div>
-      <div class="rhombus" onclick="showContent('vektoros')">Vektoros rajzok</div>
-      <div class="rhombus" onclick="showContent('oneletrajz')">Önéletrajz</div>
-      <div class="rhombus" onclick="showContent('galeria')">Galéria</div>
-    </section>
-
-    <!-- Introduction section -->
-    <section id="introduction" class="hidden">
-      <p>Rövid bemutatkozás...</p>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="hidden">
-      <p>Elérhetőségek...</p>
-      <button onclick="sendEmail()">Kapcsolatfelvétel</button>
-    </section>
-
-    <!-- Dynamic content section -->
-    <section id="dynamic-content" class="hidden"></section>
-  </main>
-
-  <script src="script.js"></script>
+    <main>
+        <div class="rhombuses">
+            <div class="rhombus" onclick="showContent('favorites')">
+                <h3>Kedvencek</h3>
+            </div>
+            <div class="rhombus" onclick="showContent('vector')">
+                <h3>Vektoros rajzok</h3>
+            </div>
+            <div class="rhombus" onclick="showContent('cv')">
+                <h3>Önéletrajz</h3>
+            </div>
+            <div class="rhombus" onclick="showContent('gallery')">
+                <h3>Galéria</h3>
+            </div>
+        </div>
+        <div id="introduction" class="content-section">
+            <p>Rövid bemutatkozás rólam...</p>
+        </div>
+        <div id="contact" class="content-section" style="display:none;">
+            <h3>Elérhetőség</h3>
+            <p>Rólam szóló adatlap...</p>
+            <div class="contact-form">
+                <input type="email" id="email" placeholder="Email cím" required>
+                <textarea id="message" placeholder="Üzenet" required></textarea>
+                <button onclick="sendEmail()">Küldés</button>
+            </div>
+        </div>
+        <div id="content" class="content-section" style="display:none;"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
