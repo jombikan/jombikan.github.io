@@ -86,6 +86,10 @@ section {
     gap: 15px;
   }
 
+  .rhombus {
+  width: 200px;
+  height: 200px;
+
   .hamburger-menu {
     display: none;
   }
