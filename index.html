@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jombik Anna</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jombik Anna</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header with navigation and title -->
+  <header>
+    <div class="logo">
+      <img src="alairas.svg" alt="Signature">
+    </div>
+    <nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="#rhombuses">Főoldal</a></li>
+        <li><a href="#introduction">Bemutatkozás</a></li>
+        <li><a href="#contact">Elérhetőség</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Jombik Anna</h1>
-        <p>Semmi sem az, aminek látszik...</p>
-    </header>
+  <!-- Main title and dynamic subtitle -->
+  <main>
+    <h1>Jombik Anna</h1>
+    <h2 id="subtitle"></h2>
 
-    <main id="main-page">
-        <div class="diamond-buttons">
-            <div class="diamond" onclick="showPage('Cserkészet')">Cserkészet</div>
-            <div class="diamond" onclick="showPage('Portfólió')">Portfólió</div>
-            <div class="diamond" onclick="showPage('Skillek')">Skillek</div>
-            <div class="diamond" onclick="showPage('Hobbik')">Rólam</div>
-        </div>
-    </main>
-    
-    <section id="portfolio-page" class="hidden">
-        <button class="home-icon" onclick="goHome()"><</button
-        <div class="portfolio-content">
-            <div class="portfolio-item">
-               <img src="https://github.com/jombikan/jombikan.github.io/raw/main/1..svg" alt="SVG 1">
-            </div>
-            <div class="portfolio-item">
-                <img src="https://github.com/jombikan/jombikan.github.io/raw/main/2..svg" alt="SVG 2">
-            </div>
-            <div class="portfolio-item">
-                <img src="https://github.com/jombikan/jombikan.github.io/raw/main/3..svg" alt="SVG 3">
-            </div> 
-        </div> 
+    <!-- Rhombuses section -->
+    <section id="rhombuses">
+      <div class="rhombus" onclick="showContent('kedvencek')">Kedvencek</div>
+      <div class="rhombus" onclick="showContent('vektoros')">Vektoros rajzok</div>
+      <div class="rhombus" onclick="showContent('oneletrajz')">Önéletrajz</div>
+      <div class="rhombus" onclick="showContent('galeria')">Galéria</div>
     </section>
-    
-    <footer>
-        <p>Elérhetőségeim: Email - jombikan@gmail.com | Telefon - +36204178456 | Messenger - Anna Jombik | Instagram - annajombik</p>
-    </footer>
 
-    <script src="script.js"></script>
+    <!-- Introduction section -->
+    <section id="introduction" class="hidden">
+      <p>Rövid bemutatkozás...</p>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="hidden">
+      <p>Elérhetőségek...</p>
+      <button onclick="sendEmail()">Kapcsolatfelvétel</button>
+    </section>
+
+    <!-- Dynamic content section -->
+    <section id="dynamic-content" class="hidden"></section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
