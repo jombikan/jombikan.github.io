@@ -1,96 +1,107 @@
-/* General styling */
 body {
-  background-color: black;
-  font-family: "Courier New", monospace;
-  color: white;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
 }
 
-h1, h2 {
-  text-align: center;
-}
-
-h1 {
-  color: white;
-}
-
-h2 {
-  color: #c49a6a;
-}
-
-/* Header styling */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: black;
-}
-
-nav ul {
-  display: none;
-  list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 .hamburger-menu {
-  display: block;
-  cursor: pointer;
+    cursor: pointer;
 }
 
-/* Rhombus styling */
-#rhombuses {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
+.signature {
+    height: 40px;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: #c59d57; /* caramel color */
+}
+
+.rhombuses {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
 .rhombus {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  border: 2px solid white;
-  color: #c49a6a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(45deg);
-  cursor: pointer;
-  margin: 10px;
-}
-
-/* Section styling */
-section {
-  padding: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-  #introduction {
-    float: left;
-    width: 50%;
-  }
-
-  #contact {
-    float: right;
-    width: 50%;
-  }
-
-  nav ul {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: #c59d57; /* caramel color */
+    transform: rotate(45deg);
     display: flex;
-    gap: 15px;
-  }
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
-  .rhombus {
-  width: 200px;
-  height: 200px;
+.rhombus h3 {
+    transform: rotate(-45deg);
+    margin: 0;
+}
 
-  .hamburger-menu {
+.content-section {
     display: none;
-  }
+    margin: 20px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #c59d57; /* caramel color */
+    background-color: #222;
+    color: white;
+}
+
+.contact-form button {
+    background-color: #c59d57; /* caramel color */
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 1;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .content-section {
+        display: flex;
+    }
 }
