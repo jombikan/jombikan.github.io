@@ -45,11 +45,11 @@ function showContent(content) {
         contentDiv.innerHTML = `
             <h3>Vektoros rajzok</h3>
             <div class="image-gallery">
-                <img src="janosvitez.jpg" class="bordered" alt="János Vitéz">
-                <img src="12honap.jpg" class="bordered" alt="12 hónap">
-                <img src="lo.jpg" class="bordered" alt="Ló">
-                <img src="bethlen.jpg" class="bordered" alt="Bethlen">
-                <img src="sedes.jpg" class="bordered" alt="Sedes">
+                <img src="janosvitez.png" class="bordered" alt="János Vitéz">
+                <img src="12honap.png" class="bordered" alt="12 hónap">
+                <img src="lo.png" class="bordered" alt="Ló">
+                <img src="bethlen.png" class="bordered" alt="Bethlen">
+                <img src="sedes.png" class="bordered" alt="Sedes">
             </div>
         `;
     } else if (content === 'cv') {
