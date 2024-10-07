@@ -3,50 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jombik Anna</title>
+  <title>Jombik Anna - Weboldal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="alairas.svg" alt="Logo" class="logo">
+
+<div class="container">
+  <!-- Üdvözlés és Kapcsolati rész -->
+  <div class="contact">
     <h1>Jombik Anna</h1>
-    <p id="subtitle"></p>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </header>
+    <p>„Emberek jönnek és emberek távoznak…” (CC)</p>
+    <div class="contact-item">📞 +36 20 417 8456</div>
+    <div class="contact-item">📧 jombikan@gmail.com</div>
+    <div class="contact-item">📍 KTK</div>
+    <div class="triangle" onclick="sendEmail()"></div>
+  </div>
+  
+  <!-- Menü Rész -->
+  <div class="menu-container">
+    <div class="menu-item">Önéletrajz</div>
+    <div class="menu-item dashed">Kedvencek</div>
+    <div class="menu-item">Vektoros rajzok</div>
+    <div class="menu-item dashed">Galéria</div>
+  </div>
+</div>
 
-  <nav id="menu">
-    <a href="#gyemantok">Főoldal</a>
-    <a href="#bemutatkozas">Bemutatkozás</a>
-    <a href="#elerhetoseg">Elérhetőség</a>
-  </nav>
-
-  <main>
-    <section id="gyemantok">
-      <div class="diamond" onclick="showSection('kedvencek')">Kedvencek</div>
-      <div class="diamond" onclick="showSection('vektoros')">Vektoros rajzok</div>
-      <div class="diamond" onclick="showSection('oneletrajz')">Önéletrajz</div>
-      <div class="diamond" onclick="showSection('galeria')">Galéria</div>
-    </section>
-
-    <section id="bemutatkozas">
-      <p>Bemutatkozás szövege...</p>
-    </section>
-
-    <section id="elerhetoseg">
-      <p>Adatok rólam...</p>
-      <div class="contact-box">
-        <label for="email">Küldjön nekem e-mailt:</label>
-        <input type="email" id="email" placeholder="Email címe">
-        <button onclick="sendEmail()">Küldés</button>
-      </div>
-    </section>
-
-    <section id="content" class="hidden">
-      <button onclick="backToMain()">&#8592; Vissza</button>
-      <div id="dynamic-content"></div>
-    </section>
-  </main>
-
-  <script src="scripts.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
