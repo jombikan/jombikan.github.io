@@ -73,7 +73,5 @@ function showContent(content) {
 function sendEmail() {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-
-    // Here you'd implement email sending logic using an API
-    alert(`Email sent to: ${email}\nMessage: ${message}`);
+    alert(`Email sent to: ${jombikan@gmail.com}\nMessage: ${message}`);
 }
