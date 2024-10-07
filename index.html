@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jombik Anna</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jombik Anna</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="hamburger-menu" onclick="toggleMenu()">
-            &#9776;
-        </div>
-        <img src="alairas.svg" alt="Aláírás" class="signature">
-        <h1>Jombik Anna</h1>
-        <h2 id="subtitle"></h2>
-    </header>
-    <nav id="menu">
-        <ul>
-            <li onclick="showSection('home')">Főoldal</li>
-            <li onclick="showSection('introduction')">Bemutatkozás</li>
-            <li onclick="showSection('contact')">Elérhetőség</li>
-        </ul>
-    </nav>
-    <main>
-        <div class="rhombuses">
-            <div class="rhombus" onclick="showContent('favorites')">
-                <h3>Kedvencek</h3>
-            </div>
-            <div class="rhombus" onclick="showContent('vector')">
-                <h3>Vektoros rajzok</h3>
-            </div>
-            <div class="rhombus" onclick="showContent('cv')">
-                <h3>Önéletrajz</h3>
-            </div>
-            <div class="rhombus" onclick="showContent('gallery')">
-                <h3>Galéria</h3>
-            </div>
-        </div>
-        <div id="introduction" class="content-section">
-            <p>Rövid bemutatkozás rólam...</p>
-        </div>
-        <div id="contact" class="content-section" style="display:none;">
-            <h3>Elérhetőség</h3>
-            <p>Rólam szóló adatlap...</p>
-            <div class="contact-form">
-                <input type="email" id="email" placeholder="Email cím" required>
-                <textarea id="message" placeholder="Üzenet" required></textarea>
-                <button onclick="sendEmail()">Küldés</button>
-            </div>
-        </div>
-        <div id="content" class="content-section" style="style.css;"></div>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <img src="alairas.svg" alt="Logo" class="logo">
+    <h1>Jombik Anna</h1>
+    <p id="subtitle"></p>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </header>
+
+  <nav id="menu">
+    <a href="#gyemantok">Főoldal</a>
+    <a href="#bemutatkozas">Bemutatkozás</a>
+    <a href="#elerhetoseg">Elérhetőség</a>
+  </nav>
+
+  <main>
+    <section id="gyemantok">
+      <div class="diamond" onclick="showSection('kedvencek')">Kedvencek</div>
+      <div class="diamond" onclick="showSection('vektoros')">Vektoros rajzok</div>
+      <div class="diamond" onclick="showSection('oneletrajz')">Önéletrajz</div>
+      <div class="diamond" onclick="showSection('galeria')">Galéria</div>
+    </section>
+
+    <section id="bemutatkozas">
+      <p>Bemutatkozás szövege...</p>
+    </section>
+
+    <section id="elerhetoseg">
+      <p>Adatok rólam...</p>
+      <div class="contact-box">
+        <label for="email">Küldjön nekem e-mailt:</label>
+        <input type="email" id="email" placeholder="Email címe">
+        <button onclick="sendEmail()">Küldés</button>
+      </div>
+    </section>
+
+    <section id="content" class="hidden">
+      <button onclick="backToMain()">&#8592; Vissza</button>
+      <div id="dynamic-content"></div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
