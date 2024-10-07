@@ -1,109 +1,101 @@
+/* Alapstílusok */
 body {
-  background-color: black;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-}
-
-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 10px;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 h1 {
-  color: white;
+  font-size: 2em;
+  margin: 0.5em 0;
 }
 
-#subtitle {
-  color: #c68c53;
+h1, p {
+  text-align: center;
 }
 
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+p {
+  font-style: italic;
+  color: #ffff00;
+  font-size: 1em;
 }
 
-nav {
-  display: none;
-  flex-direction: column;
-  background-color: #000;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 18px;
-}
-
-#gyemantok {
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.diamond {
+/* Navigációs rész */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.menu-item {
+  border: 2px solid #ffff00;
   width: 100px;
   height: 100px;
-  background-color: black;
-  border: 2px solid white;
-  transform: rotate(45deg);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
-  color: #c68c53;
+  margin: 0.5em;
+  font-weight: bold;
 }
 
-#content.hidden {
-  display: none;
+.menu-item.dashed {
+  border-style: dashed;
 }
 
-.contact-box {
-  background-color: #c68c53;
-  padding: 20px;
-  margin-top: 20px;
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
-input, button {
-  padding: 10px;
-  font-size: 16px;
+/* Kapcsolati rész */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  gap: 0.5em;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #ffff00;
+}
+
+.triangle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  cursor: pointer;
+}
+
+/* Reszponzív stílusok */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-
-  nav {
-    display: none;
-  }
-
-  #gyemantok, #bemutatkozas, #elerhetoseg {
-    padding: 10px;
-  }
-}
-
-@media (min-width: 769px) {
-  nav {
-    display: flex;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 150px;
+  
+  .menu-container {
     flex-direction: column;
-    background-color: black;
-  }
-
-  #bemutatkozas, #elerhetoseg {
-    display: flex;
-    justify-content: space-around;
+    gap: 1.5em;
   }
 }
